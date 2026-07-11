@@ -75,3 +75,56 @@ statNums.forEach(el => statObserver.observe(el));
 // ===== Footer year =====
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ===== Plan selection redirection & autofill =====
+const planBtns = document.querySelectorAll('.plan-select-btn');
+const enquiryMessage = document.getElementById('enquiryMessage');
+const enquiryName = document.getElementById('enquiryName');
+
+planBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const duration = btn.dataset.plan;
+    
+    // Determine the active membership type
+    let planType = 'Individual';
+    const activeToggle = document.querySelector('.plan-toggle__btn.is-active');
+    if (activeToggle) {
+      const group = activeToggle.dataset.group;
+      if (group === 'duo') planType = 'Duo';
+      if (group === 'group') planType = 'Group (4+)';
+    }
+
+    // Set message and focus name field
+    if (enquiryMessage) {
+      enquiryMessage.value = `Hi Gym Fit! I would like to sign up for the ${duration} ${planType} Plan. Please share the joining details.`;
+    }
+
+    // Smooth scroll to contact section
+    const contactSec = document.getElementById('contact');
+    if (contactSec) {
+      contactSec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Focus the name field
+    if (enquiryName) {
+      setTimeout(() => {
+        enquiryName.focus();
+      }, 800); // Wait for scroll to complete
+    }
+  });
+});
+
+// ===== Enquiry Form Submission =====
+const enquiryForm = document.getElementById('enquiryForm');
+const enquirySuccess = document.getElementById('enquirySuccess');
+
+if (enquiryForm && enquirySuccess) {
+  enquiryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Simulate API call/processing
+    enquiryForm.style.display = 'none';
+    enquirySuccess.style.display = 'block';
+  });
+}
