@@ -125,8 +125,21 @@ if (enquiryForm && enquirySuccess) {
   enquiryForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Simulate API call/processing
+    const name = document.getElementById('enquiryName').value;
+    const phone = document.getElementById('enquiryPhone').value;
+    const message = document.getElementById('enquiryMessage').value;
+    
+    // Format the WhatsApp message text with basic formatting
+    const formattedText = `*Gym Fit Enquiry*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Message:* ${message}`;
+    const whatsappUrl = `https://wa.me/919861661717?text=${encodeURIComponent(formattedText)}`;
+    
+    // Show success state on form card
     enquiryForm.style.display = 'none';
     enquirySuccess.style.display = 'block';
+    
+    // Redirect to WhatsApp after a brief delay
+    setTimeout(() => {
+      window.location.href = whatsappUrl;
+    }, 800);
   });
 }
