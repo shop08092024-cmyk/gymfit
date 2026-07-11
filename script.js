@@ -78,42 +78,44 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ===== Plan selection redirection & autofill =====
 const planBtns = document.querySelectorAll('.plan-select-btn');
+if (planBtns.length > 0) {
+  planBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const duration = btn.dataset.plan;
+      
+      // Determine the active membership type
+      let planType = 'Individual';
+      const activeToggle = document.querySelector('.plan-toggle__btn.is-active');
+      if (activeToggle) {
+        const group = activeToggle.dataset.group;
+        if (group === 'duo') planType = 'Duo';
+        if (group === 'group') planType = 'Group (4+)';
+      }
+
+      // Redirect to contact.html with parameters
+      window.location.href = `contact.html?plan=${encodeURIComponent(duration)}&type=${encodeURIComponent(planType)}`;
+    });
+  });
+}
+
+// ===== Parse URL params & auto-populate form (on contact page) =====
 const enquiryMessage = document.getElementById('enquiryMessage');
 const enquiryName = document.getElementById('enquiryName');
-
-planBtns.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const duration = btn.dataset.plan;
+if (enquiryMessage && enquiryName) {
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get('plan');
+  const type = params.get('type');
+  
+  if (plan && type) {
+    enquiryMessage.value = `Hi Gym Fit! I would like to sign up for the ${plan} ${type} Plan. Please share the joining details.`;
     
-    // Determine the active membership type
-    let planType = 'Individual';
-    const activeToggle = document.querySelector('.plan-toggle__btn.is-active');
-    if (activeToggle) {
-      const group = activeToggle.dataset.group;
-      if (group === 'duo') planType = 'Duo';
-      if (group === 'group') planType = 'Group (4+)';
-    }
-
-    // Set message and focus name field
-    if (enquiryMessage) {
-      enquiryMessage.value = `Hi Gym Fit! I would like to sign up for the ${duration} ${planType} Plan. Please share the joining details.`;
-    }
-
-    // Smooth scroll to contact section
-    const contactSec = document.getElementById('contact');
-    if (contactSec) {
-      contactSec.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Focus the name field
-    if (enquiryName) {
-      setTimeout(() => {
-        enquiryName.focus();
-      }, 800); // Wait for scroll to complete
-    }
-  });
-});
+    // Focus the name field with a small delay for smooth user experience
+    setTimeout(() => {
+      enquiryName.focus();
+    }, 500);
+  }
+}
 
 // ===== Enquiry Form Submission =====
 const enquiryForm = document.getElementById('enquiryForm');
