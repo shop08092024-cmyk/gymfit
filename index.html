@@ -29,13 +29,15 @@
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#top" class="nav__logo">GYM<span>FIT</span></a>
+    <a href="#top" class="nav__logo">
+      <img src="assets/logo.svg" alt="Gym Fit Fitness Center" class="nav__logo-img">
+    </a>
     <nav class="nav__links">
       <a href="contact.html">Contact</a>
       <a href="#about">The Gym</a>
-      <a href="#plans">Membership</a>
+      <a href="membership.html">Membership</a>
       <a href="#pt">Training</a>
-      <a href="#reviews">Reviews</a>
+      <a href="reviews.html">Reviews</a>
     </nav>
     <a href="tel:+919861661717" class="nav__cta">
       <span class="nav__cta-icon">☎</span> 98616 61717
@@ -45,9 +47,9 @@
   <div class="nav__mobile" id="navMobile">
     <a href="contact.html">Contact</a>
     <a href="#about">The Gym</a>
-    <a href="#plans">Membership</a>
+    <a href="membership.html">Membership</a>
     <a href="#pt">Training</a>
-    <a href="#reviews">Reviews</a>
+    <a href="reviews.html">Reviews</a>
     <a href="tel:+919861661717" class="nav__mobile-cta">☎ Call 98616 61717</a>
   </div>
 </header>
@@ -130,64 +132,7 @@
   </div>
 </section>
 
-<!-- ===== MEMBERSHIP PLANS ===== -->
-<section class="section section--dark" id="plans">
-  <div class="wrap">
-    <p class="eyebrow">MEMBERSHIP CHARGES</p>
-    <h2 class="section__title section__title--light">Flexible Memberships.<br>Group Up to Save More.</h2>
 
-    <div class="plan-toggle" role="tablist" aria-label="Choose group size">
-      <button class="plan-toggle__btn is-active" data-group="single" role="tab" aria-selected="true">Individual Plan</button>
-      <button class="plan-toggle__btn" data-group="duo" role="tab" aria-selected="false">Duo Plan <span class="save">Save 15%</span></button>
-      <button class="plan-toggle__btn" data-group="group" role="tab" aria-selected="false">Group Plan (4+) <span class="save">Save 20%</span></button>
-    </div>
-
-    <div class="plans" id="plansGrid">
-      <!-- 1 month -->
-      <div class="plan-card" data-plan="1">
-        <p class="plan-card__len">1 Month</p>
-        <p class="plan-card__price"><span class="price-value">₹2,500</span></p>
-        <p class="plan-card__note">Full access, no offer tier</p>
-        <ul class="plan-card__list">
-          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
-        </ul>
-        <a href="#contact" class="btn btn--outline btn--block plan-select-btn" data-plan="1 Month">Select Plan</a>
-      </div>
-      <!-- 3 months -->
-      <div class="plan-card" data-plan="3">
-        <p class="plan-card__len">3 Months</p>
-        <p class="plan-card__price"><span class="price-value" data-single="4750" data-duo="4500" data-group="4250">₹4,750</span></p>
-        <p class="plan-card__note plan-card__note--offer">10% off applied</p>
-        <ul class="plan-card__list">
-          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
-        </ul>
-        <a href="#contact" class="btn btn--outline btn--block plan-select-btn" data-plan="3 Months">Select Plan</a>
-      </div>
-      <!-- 6 months -->
-      <div class="plan-card plan-card--popular" data-plan="6">
-        <p class="plan-card__badge">Most popular</p>
-        <p class="plan-card__len">6 Months</p>
-        <p class="plan-card__price"><span class="price-value" data-single="8400" data-duo="8000" data-group="7500">₹8,400</span></p>
-        <p class="plan-card__note plan-card__note--offer">10% off applied</p>
-        <ul class="plan-card__list">
-          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
-        </ul>
-        <a href="#contact" class="btn btn--lime btn--block plan-select-btn" data-plan="6 Months">Select Plan</a>
-      </div>
-      <!-- 12 months -->
-      <div class="plan-card" data-plan="12">
-        <p class="plan-card__len">12 Months</p>
-        <p class="plan-card__price"><span class="price-value" data-single="13500" data-duo="12750" data-group="12000">₹13,500</span></p>
-        <p class="plan-card__note plan-card__note--offer">10% off applied</p>
-        <ul class="plan-card__list">
-          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
-        </ul>
-        <a href="#contact" class="btn btn--outline btn--block plan-select-btn" data-plan="12 Months">Select Plan</a>
-      </div>
-    </div>
-    <p class="plans__footnote">* Special Duo and Group tier discounts apply only to 3, 6 &amp; 12 month memberships. Single-day passes are always available for ₹200.</p>
-  </div>
-</section>
 
 <!-- ===== PERSONAL TRAINING ===== -->
 <section class="section" id="pt">
@@ -245,67 +190,7 @@
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section class="section section--dark" id="reviews">
-  <div class="wrap">
-    <p class="eyebrow">FROM MEMBERS, ON GOOGLE</p>
-    <div class="reviews__head">
-      <h2 class="section__title section__title--light">Real Results from<br>Real Members.</h2>
-      <div class="rating-block">
-        <span class="rating-block__num">4.9</span>
-        <span class="rating-block__stars">★★★★★</span>
-        <span class="rating-block__count">275 Google reviews</span>
-      </div>
-    </div>
 
-    <div class="reviews__tags" aria-hidden="true">
-      <span>spacious gym</span><span>supportive trainers</span><span>modern equipment</span><span>clean facility</span><span>no waiting time</span><span>cardio section</span>
-    </div>
-
-    <div class="review-track" id="reviewTrack">
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">Best gym I've joined so far! Clean equipment, great trainers who actually correct your form, and a super motivating vibe. The morning 6am batch is my favorite.</p>
-        <p class="review-card__name">Shailesh Gawali</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">Been training here for almost 3 months and I genuinely love this gym. It's definitely the best gym in Sus Gaon — the environment is very positive and motivating.</p>
-        <p class="review-card__name">Nitin Ukhalkar</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">Been training here for the past 4 years. Very supportive staff and an excellent setup of Jerai Fitness equipment. Beginner or professional, it's a perfect workout zone.</p>
-        <p class="review-card__name">Abhishek Roy</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">One of the best gyms I've joined! Friendly and supportive trainers, plenty of space, and well-maintained equipment with almost no waiting time.</p>
-        <p class="review-card__name">Madhur Kamble</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">Good spacious gym with a lot of equipment options. No need to wait between sets. Trainers are kind and very helpful.</p>
-        <p class="review-card__name">Pankaj Pawar</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">I've used FitPass to try several gyms, so it takes a lot to impress me — but Gym Fit genuinely stands out. Every muscle group has proper, well-maintained equipment.</p>
-        <p class="review-card__name">Aamir Magar</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">Very nice, well equipped and clean. I travel 6 km for this gym — all trainers are good, especially Tejas sir. 5 stars from my side.</p>
-        <p class="review-card__name">Pratik Deshmukh</p>
-      </div>
-      <div class="review-card">
-        <p class="review-card__stars">★★★★★</p>
-        <p class="review-card__text">Great place, great coaches, and affordable prices.</p>
-        <p class="review-card__name">Ankur Gupta</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== RULES STRIP ===== -->
 <section class="rules">
@@ -323,15 +208,17 @@
 <footer class="footer">
   <div class="wrap footer__grid">
     <div>
-      <a href="#top" class="nav__logo">GYM<span>FIT</span></a>
+      <a href="#top" class="nav__logo">
+        <img src="assets/logo.svg" alt="Gym Fit Fitness Center" class="nav__logo-img footer__logo-img">
+      </a>
       <p class="footer__tag">Fitness Center · Sus, Pune</p>
     </div>
     <div class="footer__links">
       <a href="#about">The Gym</a>
-      <a href="#plans">Membership</a>
+      <a href="membership.html">Membership</a>
       <a href="#pt">Training</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="footer__cta">
       <a href="tel:+919861661717" class="btn btn--lime btn--block">☎ 98616 61717</a>

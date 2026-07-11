@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Plans — Gym Fit Fitness Center, Sus, Pune</title>
+<meta name="description" content="View membership plans and pricing packages for Gym Fit Fitness Center in Sus, Pune. Choose from individual, duo, or group rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== TOP TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>MON–SAT 5:00 AM – 11:00 PM</span><span class="dot">●</span>
+    <span>SUNDAY 9 AM–12 PM &amp; 5–8 PM</span><span class="dot">●</span>
+    <span>4.9★ FROM 275 GOOGLE REVIEWS</span><span class="dot">●</span>
+    <span>ONE DAY PASS ₹200</span><span class="dot">●</span>
+    <span>MON–SAT 5:00 AM – 11:00 PM</span><span class="dot">●</span>
+    <span>SUNDAY 9 AM–12 PM &amp; 5–8 PM</span><span class="dot">●</span>
+    <span>4.9★ FROM 275 GOOGLE REVIEWS</span><span class="dot">●</span>
+    <span>ONE DAY PASS ₹200</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html#top" class="nav__logo">
+      <img src="assets/logo.svg" alt="Gym Fit Fitness Center" class="nav__logo-img">
+    </a>
+    <nav class="nav__links">
+      <a href="contact.html">Contact</a>
+      <a href="index.html#about">The Gym</a>
+      <a href="membership.html">Membership</a>
+      <a href="index.html#pt">Training</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+    <a href="tel:+919861661717" class="nav__cta">
+      <span class="nav__cta-icon">☎</span> 98616 61717
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="contact.html">Contact</a>
+    <a href="index.html#about">The Gym</a>
+    <a href="membership.html">Membership</a>
+    <a href="index.html#pt">Training</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="tel:+919861661717" class="nav__mobile-cta">☎ Call 98616 61717</a>
+  </div>
+</header>
+
+<!-- ===== MEMBERSHIP PLANS ===== -->
+<section class="section section--dark" style="min-height: 80vh;" id="plans">
+  <div class="wrap">
+    <p class="eyebrow">MEMBERSHIP CHARGES</p>
+    <h2 class="section__title section__title--light">Flexible Memberships.<br>Group Up to Save More.</h2>
+
+    <div class="plan-toggle" role="tablist" aria-label="Choose group size">
+      <button class="plan-toggle__btn is-active" data-group="single" role="tab" aria-selected="true">Individual Plan</button>
+      <button class="plan-toggle__btn" data-group="duo" role="tab" aria-selected="false">Duo Plan <span class="save">Save 15%</span></button>
+      <button class="plan-toggle__btn" data-group="group" role="tab" aria-selected="false">Group Plan (4+) <span class="save">Save 20%</span></button>
+    </div>
+
+    <div class="plans" id="plansGrid">
+      <!-- 1 month -->
+      <div class="plan-card" data-plan="1">
+        <p class="plan-card__len">1 Month</p>
+        <p class="plan-card__price"><span class="price-value">₹2,500</span></p>
+        <p class="plan-card__note">Full access, no offer tier</p>
+        <ul class="plan-card__list">
+          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
+        </ul>
+        <a href="contact.html" class="btn btn--outline btn--block plan-select-btn" data-plan="1 Month">Select Plan</a>
+      </div>
+      <!-- 3 months -->
+      <div class="plan-card" data-plan="3">
+        <p class="plan-card__len">3 Months</p>
+        <p class="plan-card__price"><span class="price-value" data-single="4750" data-duo="4500" data-group="4250">₹4,750</span></p>
+        <p class="plan-card__note plan-card__note--offer">10% off applied</p>
+        <ul class="plan-card__list">
+          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
+        </ul>
+        <a href="contact.html" class="btn btn--outline btn--block plan-select-btn" data-plan="3 Months">Select Plan</a>
+      </div>
+      <!-- 6 months -->
+      <div class="plan-card plan-card--popular" data-plan="6">
+        <p class="plan-card__badge">Most popular</p>
+        <p class="plan-card__len">6 Months</p>
+        <p class="plan-card__price"><span class="price-value" data-single="8400" data-duo="8000" data-group="7500">₹8,400</span></p>
+        <p class="plan-card__note plan-card__note--offer">10% off applied</p>
+        <ul class="plan-card__list">
+          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
+        </ul>
+        <a href="contact.html" class="btn btn--lime btn--block plan-select-btn" data-plan="6 Months">Select Plan</a>
+      </div>
+      <!-- 12 months -->
+      <div class="plan-card" data-plan="12">
+        <p class="plan-card__len">12 Months</p>
+        <p class="plan-card__price"><span class="price-value" data-single="13500" data-duo="12750" data-group="12000">₹13,500</span></p>
+        <p class="plan-card__note plan-card__note--offer">10% off applied</p>
+        <ul class="plan-card__list">
+          <li>Full Gym Floor Access</li><li>All Group Classes Included</li><li>Free Steam Bath Access</li><li>Complimentary Lockers &amp; Showers</li>
+        </ul>
+        <a href="contact.html" class="btn btn--outline btn--block plan-select-btn" data-plan="12 Months">Select Plan</a>
+      </div>
+    </div>
+    <p class="plans__footnote">* Special Duo and Group tier discounts apply only to 3, 6 &amp; 12 month memberships. Single-day passes are always available for ₹200.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a href="index.html#top" class="nav__logo">
+        <img src="assets/logo.svg" alt="Gym Fit Fitness Center" class="nav__logo-img footer__logo-img">
+      </a>
+      <p class="footer__tag">Fitness Center · Sus, Pune</p>
+    </div>
+    <div class="footer__links">
+      <a href="index.html#about">The Gym</a>
+      <a href="membership.html">Membership</a>
+      <a href="index.html#pt">Training</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer__cta">
+      <a href="tel:+919861661717" class="btn btn--lime btn--block">☎ 98616 61717</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© <span id="year"></span> Gym Fit Fitness Center, Sus. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

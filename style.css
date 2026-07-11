@@ -127,12 +127,21 @@ h1,h2,h3{ margin:0; }
   display:flex; align-items:center; justify-content:space-between; gap: 20px;
 }
 .nav__logo{
-  font-family: var(--display);
-  font-size: 28px;
-  color: var(--cream);
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
-.nav__logo span{ color: var(--lime); }
+.nav__logo-img{
+  height: 52px;
+  display: block;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+.nav__logo-img:hover {
+  transform: scale(1.05);
+}
+.footer__logo-img{
+  height: 72px;
+}
 .nav__links{ display:flex; gap: 30px; }
 .nav__links a{
   font-family: var(--sub);

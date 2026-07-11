@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Outer distressed circle effect / clean border -->
+  <circle cx="100" cy="100" r="92" fill="#0B0E08"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#F3F3EA" stroke-width="1.5"/>
+  
+  <!-- White center circle -->
+  <circle cx="100" cy="100" r="54" fill="#ffffff" stroke="#0B0E08" stroke-width="4"/>
+  
+  <!-- Horizontal white wings to match the logo style -->
+  <rect x="24" y="76" width="152" height="48" fill="#ffffff"/>
+  <!-- Top & bottom borders for the center bar -->
+  <line x1="24" y1="76" x2="176" y2="76" stroke="#0B0E08" stroke-width="4"/>
+  <line x1="24" y1="124" x2="176" y2="124" stroke="#0B0E08" stroke-width="4"/>
+  
+  <!-- Text Paths for Arching -->
+  <defs>
+    <!-- Top arc: clockwise from left to right -->
+    <path id="topArc" d="M 28 100 A 72 72 0 0 1 172 100" fill="none"/>
+    <!-- Bottom arc: clockwise from right to left (inverted for upright text) -->
+    <path id="bottomArc" d="M 172 100 A 72 72 0 0 1 28 100" fill="none"/>
+  </defs>
+  
+  <!-- Arched Text -->
+  <text font-family="'Space Mono', 'Arial Black', sans-serif" font-size="19" font-weight="700" fill="#ffffff" letter-spacing="1">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">FITNESS</textPath>
+  </text>
+  <text font-family="'Space Mono', 'Arial Black', sans-serif" font-size="19" font-weight="700" fill="#ffffff" letter-spacing="1">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">CENTER</textPath>
+  </text>
+  
+  <!-- GYM FIT Center Text -->
+  <text x="100" y="112" font-family="'Anton', 'Inter', sans-serif" font-size="36" font-weight="800" fill="#9CD325" stroke="#0B0E08" stroke-width="4" paint-order="stroke fill" stroke-linejoin="round" text-anchor="middle" letter-spacing="0">
+    GYM FIT
+  </text>
+</svg>
