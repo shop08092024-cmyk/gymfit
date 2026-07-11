@@ -128,7 +128,7 @@ h1,h2,h3{ margin:0; }
 }
 .nav__logo{
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 28px;
   color: var(--cream);
   letter-spacing: 0.02em;
 }
